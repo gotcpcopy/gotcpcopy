@@ -121,7 +121,7 @@ func copySync(w io.Writer, r io.Reader, doneC chan<- bool) {
 }
 func main() {
 	flag.StringVar(&l, "l", "", "listen host:port")
-	flag.StringVar(&r, "r", "", "remote host:port")
+	flag.StringVar(&r, "r", "", "remote host:port, if mutiple, split with , the first is the primary target")
 	flag.Parse()
 	if len(l) <= 0 {
 		flag.PrintDefaults()
